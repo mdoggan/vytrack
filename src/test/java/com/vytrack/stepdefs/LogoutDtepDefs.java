@@ -3,6 +3,7 @@ package com.vytrack.stepdefs;
 import com.vytrack.pages.BasePage;
 import com.vytrack.pages.LoginPage;
 import com.vytrack.pages.LogoutPage;
+import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
@@ -30,7 +31,16 @@ public class LogoutDtepDefs {
         Driver.get().navigate().back();
         //Thread.sleep(2000);
     }
+    @Given("user close the all tab")
+    public void user_close_the_all_tab() {
+      Driver.closeDriver();
+    }
 
+    @Given("user verify on the login page")
+    public void user_verify_on_the_login_page() {
+        String Url="http://qa.intabella.com/user/login";
+       Assert.assertEquals(Url,Driver.get().getCurrentUrl());
+    }
 
 
 }

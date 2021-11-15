@@ -48,8 +48,7 @@ BasePage basePage=new BasePage();
     }
     @Given("the password should not be displayed")
     public void the_password_should_not_be_displayed() {
-        System.out.println("loginPage.userName.getAttribute(\"value\") = " + loginPage.userName.getAttribute("value"));
-        System.out.println("loginPage.passWord.getAttribute(\"value\") = " + loginPage.passWord.getAttribute("value"));
+        Assert.assertTrue(loginPage.passWord.getAttribute("type").equals("password"));
 
     }
     @Given("the user should click on the {string} link")

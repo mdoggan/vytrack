@@ -17,3 +17,6 @@ Feature:  Logout Functionality with Cucumber
     * verify user on the login page
 @INN-859
     Scenario: 3- The user must be logged out if the user close the open tab
+  * user close the all tab
+  * user on the login page
+  * user verify on the login page
